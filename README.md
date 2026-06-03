@@ -9,7 +9,7 @@ Personal digital proxy — Supervisor + Workers + Durable Execution + Critic Lan
 
 This repo is the design home for a fully autonomous agent system that:
 
-- Acts as Jaron at the computer — desktop control, browser control, phone control.
+- Acts as Jaron at the computer — desktop control, browser control, phone integration.
 - Runs a loop of multiple AI models (Claude, ChatGPT, Grok, DeepSeek, Ollama) without manual approval.
 - Self-heals: if an agent fails, another fixes or replaces it. Rolls back bad calls, reboots workers.
 - Creates content for monetisation (X posts, YouTube/TikTok).
@@ -65,9 +65,28 @@ Ingress (Gmail / Drive change / GitHub event / cron / webhook)
 |---|---|---|
 | Browser | browser-use / Playwright | web scraping, posting, DOM automation |
 | Desktop (Windows) | Claude Desktop / computer-use | native apps, screen click, keyboard |
-| Phone (Android) | scrcpy + ADB | tap, type, screencap, notification read |
+| Phone (iPhone) | Website-as-proxy + n8n WhatsApp node | see iPhone Integration section below |
 | Sandbox build | Docker / E2B | code generation, install, test |
 | Content creation | MoviePy / Pillow / gTTS | video, image, voice |
+
+---
+
+## iPhone Integration
+
+iOS blocks all external screen-mirroring and ADB-style control — scrcpy and ADB are Android-only and do not apply here.
+
+Three viable iPhone-compatible paths:
+
+**1. Website-as-proxy (primary approach — already in progress)**  
+A purpose-built web dashboard acts as the mobile command surface. The agent writes to it; Jaron reads and responds from iPhone via browser. No native iOS control required. This is the cleanest path given iOS constraints.
+
+**2. n8n + WhatsApp Business node**  
+n8n has a native WhatsApp Business node. The agent sends status updates and receives commands via WhatsApp message — works natively on iPhone with no special setup beyond a WhatsApp Business account.
+
+**3. n8n + iMessage via Apple Shortcuts + webhook**  
+An iPhone Shortcut can POST to an n8n webhook on a trigger (e.g., receiving a specific iMessage). Limited but functional for simple command/response loops without any server-side iOS agent.
+
+> **Note:** Any reference to scrcpy, ADB, or Android in the brainstorming transcript in `/docs/` does not apply to this build. Those were suggestions from AI assistants unaware of the iPhone constraint.
 
 ---
 
@@ -121,7 +140,7 @@ Ingress (Gmail / Drive change / GitHub event / cron / webhook)
 
 ## Source Conversations
 
-`/docs/conversation-transcript-2026-06-03.md` contains the full verbatim design conversation between Jaron, DeepSeek, Gemini, Grok, and Claude that produced this architecture.
+`/docs/conversation-transcript-2026-06-03.md` — Design brainstorming session (vibe coding) between Jaron, DeepSeek, Gemini, Grok, and Claude. Kept as a reference log of how the architecture was reasoned through. **Not an implementation spec** — treat Android/scrcpy/ADB references in it as irrelevant to this build.
 
 ---
 
