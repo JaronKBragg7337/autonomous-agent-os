@@ -42,7 +42,7 @@ This repo is the design home for a fully autonomous agent system that:
 
 ---
 
-## Data Flow
+## Data Flow Or Should we Say ... ⚠️⚠️⚠️ hastag #ThisIsOldNews with the AI Heartbeat loop and control screen 😉⚠️⚠️⚠️
 
 ```
 Ingress (Gmail / Drive change / GitHub event / cron / webhook)
