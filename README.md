@@ -116,6 +116,12 @@ An iPhone Shortcut can POST to an n8n webhook on a trigger (e.g., receiving a sp
 ---
 ## The Heartbeat Loop 
 ⚠️⚠️⚠️ THIS IS THE KEY. NOT API KEY BUT THE ANONYMOUS SYSTEM LOOP KEY ⚠️⚠️⚠️
+No AI is used more than the other for this loop. 
+Notice: 
+- Claude Cowork may be slower at Windows MCP than Codex controlling the screen
+- Claude Cowork Strives at internal work compared to Windows MCP and is personal preference to have claude Cowork focus on that. a simple To Do trail like codex SHOULD work. [Not yet tested with claude and To Do list] 
+- Codex is fast with screen control and when you have issues using Files and Codex Dispatch can help move forward for debugging / Claudd can be tagged along by telling Codex a prompt to control screen and set schedule task for claude to Assist. 
+- Codex is most reliable at rebooting system. /Claude would be best to assit with set task from codex controlling screen. 
 # AI Workforce — Loop Build Master Reference
 
 ## Courier-and-Worker Loop with a Human Stop-Channel
