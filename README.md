@@ -1,7 +1,7 @@
 # Autonomous Agent OS
 
 **Self-healing, autonomous multi-AI agent operating system.**  
-Personal digital proxy — Supervisor + Workers + Durable Execution + Critic Lane + Task Ledger.
+Personal digital proxy — Supervisor + Workers + Durable Execution + Critic Lane + Task Ledger. NO CODE NEEDED AND NEVER NEEDING TO CODE YOURSELF. 
 
 ---
 
