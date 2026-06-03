@@ -37,8 +37,8 @@ This repo is the design home for a fully autonomous agent system that:
 2. **Capability Registry** — machine-readable list of available models, MCP tools, browser/desktop/phone skills, cost/latency/reliability scores. ⚠️⚠️⚠️ Can be Done using Control screen ⚠️⚠️⚠️
 3. **Evidence System** — agents attach artifacts (screenshot, file hash, commit hash, email message ID, terminal output) so the critic judges reality, not narration.
 4. **Critic Lane** — dedicated evaluator that receives goal + claimed action + evidence bundle and returns accept / retry_same_agent / reroute_new_agent / rollback_checkpoint / decompose_task. ⚠️⚠️⚠️ Can Now Be Done If Using Control Screen With Codex ⚠️⚠️⚠️
-5. **Planner/Executor Split** — separate models for decomposition, action, verification, and repair.
-6. **Skill Acquisition Pipeline** — when a capability is missing: search registry, create acquisition task, sandbox build/test, validate, register, requeue original task.
+5. **Planner/Executor Split** — separate models for decomposition, action, verification, and repair. ⚠️⚠️⚠️ Can Be Use by File with To Do in Heartbeat loop. control screen and which AI to go go/ what to say. ⚠️⚠️⚠️ 
+6. **Skill Acquisition Pipeline** — when a capability is missing: search registry, create acquisition task, sandbox build/test, validate, register, requeue original task. ⚠️⚠️⚠️ Power of Control Screen 💪⚠️⚠️⚠️
 
 ---
 
