@@ -115,6 +115,7 @@ An iPhone Shortcut can POST to an n8n webhook on a trigger (e.g., receiving a sp
 
 ---
 ## The Heartbeat Loop 
+⚠️⚠️⚠️ THIS IS THE KEY. NOT API KEY BUT THE ANONYMOUS SYSTEM LOOP KEY ⚠️⚠️⚠️
 # AI Workforce — Loop Build Master Reference
 
 ## Courier-and-Worker Loop with a Human Stop-Channel
