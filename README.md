@@ -28,15 +28,15 @@ This repo is the design home for a fully autonomous agent system that:
 | Browser/web actor | Websites, posting, scraping | browser-use / Playwright |
 | Desktop actor | Native Windows apps, screen-based actions | Claude Desktop / computer-use |
 | Local skill workers | Cheap classification, summarization, watchdogs | Ollama (Llama 3, Mistral) |
-
+⚠️⚠️⚠️ Heartbeat Skips Needing triggers, 
 ---
 
 ## Core Missing Systems (Identified June 2026)
 
 1. **Task Ledger** — typed task objects with task_id, goal, subgoal, assigned_agent, required_capabilities, status, attempt_count, checkpoint_ref, output_refs, critic_score, next_action.
-2. **Capability Registry** — machine-readable list of available models, MCP tools, browser/desktop/phone skills, cost/latency/reliability scores.
+2. **Capability Registry** — machine-readable list of available models, MCP tools, browser/desktop/phone skills, cost/latency/reliability scores. ⚠️⚠️⚠️ Can be Done using Control screen ⚠️⚠️⚠️
 3. **Evidence System** — agents attach artifacts (screenshot, file hash, commit hash, email message ID, terminal output) so the critic judges reality, not narration.
-4. **Critic Lane** — dedicated evaluator that receives goal + claimed action + evidence bundle and returns accept / retry_same_agent / reroute_new_agent / rollback_checkpoint / decompose_task.
+4. **Critic Lane** — dedicated evaluator that receives goal + claimed action + evidence bundle and returns accept / retry_same_agent / reroute_new_agent / rollback_checkpoint / decompose_task. ⚠️⚠️⚠️ Can Now Be Done If Using Control Screen With Codex ⚠️⚠️⚠️
 5. **Planner/Executor Split** — separate models for decomposition, action, verification, and repair.
 6. **Skill Acquisition Pipeline** — when a capability is missing: search registry, create acquisition task, sandbox build/test, validate, register, requeue original task.
 
